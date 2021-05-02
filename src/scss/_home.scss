@@ -1,0 +1,106 @@
+header {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #191919;
+  height: 5.625rem;
+  transition: all 400ms ease-in-out;
+
+  &.fade-out {
+    transform: translateY(-100%);
+  }
+
+  .bar {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    ul {
+      li {
+        width: 1rem;
+        height: 3px;
+        background-color: $white;
+        list-style: none;
+        &:not(:last-child) {
+          margin-bottom: 3px;
+        }
+      }
+    }
+    .title {
+      margin-left: 76px;
+      color: $white;
+      p {
+        font-weight: 800;
+      }
+    }
+  }
+
+  .trolleyIcon {
+    color: $white;
+    margin-right: 24px;
+  }
+
+  border-bottom: 1px solid #363636;
+}
+
+.banner {
+  background-image: url("../assets/home/mobile/image-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 31.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .banner-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    .banner-title {
+      margin-bottom: 1.5rem;
+    }
+    .a {
+      margin-top: 1rem;
+
+      p {
+        color: #838383;
+        letter-spacing: 0.5625rem;
+      }
+    }
+    .b {
+      h4 {
+        color: $white;
+        letter-spacing: 5px;
+        font-weight: 400;
+      }
+    }
+    .c {
+      p {
+        color: #bdbdbd;
+        line-height: 1.5;
+      }
+    }
+    .d {
+      button {
+        background-color: #d87d4a;
+        color: white;
+        padding: 0rem 2rem;
+        height: 48px;
+        border: none;
+      }
+    }
+  }
+}
+
+.products {
+  display: grid;
+  height: 42.6875rem;
+}
