@@ -9,7 +9,10 @@ function Header() {
   const isMenuOpen = useSelector((state) => state.dialogs.isMenuOpen);
   const dispatch = useDispatch();
   const transitionNavBar = () =>
-    window.scrollY > 400 ? setShow(true) : setShow(false);
+    window.scrollY > 400
+      ? (setShow(true), dispatch(openOrCloseMenu(false)))
+      : setShow(false);
+
   useEffect(() => {
     window.addEventListener("scroll", transitionNavBar);
     return () => window.removeEventListener("scroll", transitionNavBar);
@@ -38,7 +41,7 @@ function Header() {
             <a href="#home">HOME</a>
           </li>
           <li>
-            <a href="#heaphones">HEADPHONES</a>
+            <a href="#product">HEADPHONES</a>
           </li>
           <li>
             <a href="#speakers">SPEAKERS</a>

@@ -8,12 +8,12 @@ header {
   background-color: #191919;
   height: 5.625rem;
   transition: all 200ms ease-in-out;
-  z-index: 1;
+  z-index: 10;
 
   @include breakpoint-up(large) {
     left: 10%;
     right: 10%;
-    width: 80%;
+    max-width: 80%;
   }
 
   &.fade-out {
@@ -24,8 +24,12 @@ header {
     display: flex;
     align-items: center;
     margin-left: 1.5rem;
+    @include breakpoint-up(large) {
+      margin: 0;
+    }
 
     ul {
+      cursor: pointer;
       li {
         width: 1rem;
         height: 3px;
@@ -55,11 +59,12 @@ header {
 
       li {
         list-style: none;
-        cursor: pointer;
-        transition: all 200ms ease-in-out;
 
         a {
           color: white;
+          text-decoration: none;
+          cursor: pointer;
+          transition: all 200ms ease-in-out;
           &:hover {
             color: $brown;
           }
@@ -77,11 +82,13 @@ header {
   }
 
   .trolleyIcon {
+    cursor: pointer;
     color: $white;
     margin-right: 24px;
+    @include breakpoint-up(large) {
+      margin: 0;
+    }
   }
-
-  // margin: 10rem;
 
   border-bottom: 1px solid #363636;
 }

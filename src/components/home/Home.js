@@ -5,18 +5,18 @@ import Header from "./sub-components/Header";
 import Banner from "./sub-components/Banner";
 import Products from "./sub-components/Products";
 import Footer from "./sub-components/Footer";
-import { useSelector } from "react-redux";
+// import Galleries from "./sub-components/Galleries";
+
 import Menu from "./dialogs/Menu";
 
 function Home() {
-  const isMenuOpen = useSelector((state) => state.dialogs.isMenuOpen);
-
   return (
     <div className="home">
       <Header />
-      {isMenuOpen ? <Menu /> : false}
+      <Menu />
       <Banner />
       <Products />
+      {/* <Galleries /> */}
       <Footer />
     </div>
   );

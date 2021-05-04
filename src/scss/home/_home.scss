@@ -1,46 +1,8 @@
-@import "./subs-scss/header";
-@import "./subs-scss/banner";
+//Components
+@import "./subs-components/header";
+@import "./subs-components/banner";
+@import "./subs-components/products";
+@import "./subs-components/footer";
 
-.products {
-  img {
-    width: 100%;
-    z-index: 0;
-    transform: translateY(-35px) scale(1.8);
-  }
-  display: grid;
-  //   height: 42.6875rem;
-  margin: 5rem 1.1875rem;
-  grid-template: repeat(3, 165px) / 327px;
-  justify-content: center;
-  grid-gap: 4.25rem;
-
-  @include breakpoint-up(medium) {
-    grid-template: 167px / repeat(3, 1fr);
-  }
-
-  .box {
-    background-color: $gray;
-    border-radius: 5px;
-    display: grid;
-    grid-template: repeat(3, 3fr) / 80px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-
-    .shop {
-      display: flex;
-      align-items: center;
-    }
-    h5,
-    p,
-    .arrowForward {
-      transform: translateY(-15px);
-    }
-    .arrowForward {
-      color: $brown;
-      width: 1rem;
-      margin-left: 1rem;
-    }
-  }
-}
+//dialogs
+@import "./subs-components/dialogs/menu";
