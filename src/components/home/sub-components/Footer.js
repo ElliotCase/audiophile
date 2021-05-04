@@ -8,30 +8,55 @@ function Footer() {
     <footer>
       <div className="items">
         <div className="block" />
-        <div className="contents">
-          <p>audiophile</p>
-          <ul>
-            <li>
-              <a>HOME</a>
-            </li>
-            <li>
-              <a>HEADPHONES</a>
-            </li>
-            <li>
-              <a>SPEAKERS</a>
-            </li>
-            <li>
-              <a>EARPHONES</a>
-            </li>
-          </ul>
-          <p className="paragraph">
-            Audiophile is an all in one stop to fulfill your audio needs. We're
-            a small team of music lovers and sound specialists who are devoted
-            to helping you get the most out of personal audio. Come and visit
-            our demo facility - we’re open 7 days a week.
-          </p>
-          <div className="flex">
-            <p className="same">Copyright 2021. All Rights Reserved</p>
+        <div style={{ width: "100%" }} className="flex-xlarge-desktop">
+          <div className="contents">
+            <div className="flex-desktop">
+              <p>audiophile</p>
+              <ul className="hide-for-large-desktop">
+                <li>
+                  <a href="#home">HOME</a>
+                </li>
+                <li>
+                  <a href="#heaphones">HEADPHONES</a>
+                </li>
+                <li>
+                  <a href="#speakers">SPEAKERS</a>
+                </li>
+                <li>
+                  <a href="#earphones">EARPHONES</a>
+                </li>
+              </ul>
+            </div>
+            <p className="paragraph">
+              Audiophile is an all in one stop to fulfill your audio needs.
+              We're a small team of music lovers and sound specialists who are
+              devoted to helping you get the most out of personal audio. Come
+              and visit our demo facility - we’re open 7 days a week.
+            </p>
+            <div className="flex-tablet">
+              <p className="same">Copyright 2021. All Rights Reserved</p>
+              <div className="icons hide-for-large-desktop">
+                <FacebookIcon className="icon" />
+                <TwitterIcon className="icon" />
+                <InstagramIcon className="icon" />
+              </div>
+            </div>
+          </div>
+          <div className="xlarge hide-for-desktop-down">
+            <ul>
+              <li>
+                <a href="#home">HOME</a>
+              </li>
+              <li>
+                <a href="#headphones">HEADPHONES</a>
+              </li>
+              <li>
+                <a href="#speakers">SPEAKERS</a>
+              </li>
+              <li>
+                <a href="#earphones">EARPHONES</a>
+              </li>
+            </ul>
             <div className="icons">
               <FacebookIcon className="icon" />
               <TwitterIcon className="icon" />

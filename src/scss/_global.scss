@@ -26,3 +26,15 @@ html {
     display: none !important;
   }
 }
+
+.hide-for-desktop-down {
+  @include breakpoint-down(xlarge) {
+    display: none !important;
+  }
+}
+
+.hide-for-large-desktop {
+  @include breakpoint-up(xlarge) {
+    display: none !important;
+  }
+}

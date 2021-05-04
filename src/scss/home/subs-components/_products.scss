@@ -6,6 +6,10 @@
     @include breakpoint-up(medium) {
       transform: translateY(-70px) scale(1.8);
     }
+
+    @include breakpoint-up(large) {
+      transform: translateY(-60px) scale(1.8);
+    }
   }
   display: grid;
   margin: 92px 25px;

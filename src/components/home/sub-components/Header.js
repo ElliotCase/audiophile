@@ -16,7 +16,7 @@ function Header() {
   useEffect(() => {
     window.addEventListener("scroll", transitionNavBar);
     return () => window.removeEventListener("scroll", transitionNavBar);
-  }, []);
+  });
 
   return (
     <header className={`${show ? `fade-out` : ""}`}>

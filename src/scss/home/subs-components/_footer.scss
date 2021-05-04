@@ -15,6 +15,9 @@ footer {
       align-items: flex-start;
       margin: 0 40px;
     }
+    @include breakpoint-up(xlarge) {
+      margin: 0 165px;
+    }
 
     .block {
       width: 101px;
@@ -22,8 +25,18 @@ footer {
       background-color: $brown;
     }
 
+    @include breakpoint-up(xlarge) {
+      width: 100%;
+      max-width: 1800px;
+      .flex-xlarge-desktop {
+        display: flex;
+        margin: 2rem 0;
+      }
+    }
+
     .contents {
       display: flex;
+      width: 100%;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -34,9 +47,21 @@ footer {
 
       p {
         font-weight: 800;
-        margin: 1rem;
+        margin: 3rem 0;
+        text-align: center;
+
         @include breakpoint-up(medium) {
           margin: 1rem 0;
+          text-align: start;
+          margin-top: 3.5rem;
+        }
+        @include breakpoint-up(large) {
+          margin: 1rem 0;
+          text-align: start;
+          margin-top: 3.5rem;
+        }
+        @include breakpoint-up(xlarge) {
+          //   margin: 0;
         }
       }
 
@@ -44,11 +69,25 @@ footer {
         @include breakpoint-up(medium) {
           display: flex;
         }
+        @include breakpoint-up(large) {
+          margin: 0;
+        }
         list-style: none;
         text-align: center;
 
         li {
-          margin: 1rem 0;
+          margin: 1.875rem 0;
+          a {
+            color: white;
+            text-decoration: none;
+            transition: all 200ms ease-in-out;
+            &:hover {
+              color: $brown;
+            }
+            &:active {
+              opacity: 0.08;
+            }
+          }
           &:not(:last-child) {
             @include breakpoint-up(medium) {
               margin-right: 1.875rem;
@@ -72,11 +111,12 @@ footer {
         }
       }
 
-      .flex {
+      .flex-tablet {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         @include breakpoint-up(medium) {
           flex-direction: row;
           width: 100%;
@@ -85,10 +125,86 @@ footer {
         }
       }
 
+      .flex-desktop {
+        @include breakpoint-up(large) {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1rem 0;
+          width: 100%;
+
+          p {
+            margin: 0;
+          }
+        }
+        @include breakpoint-up(xlarge) {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
       .icons {
         margin: 1rem;
+
         .icon:not(:last-child) {
           margin-right: 10px;
+        }
+        .icon {
+          cursor: pointer;
+          transition: all 200ms ease-in-out;
+          &:hover {
+            color: $brown;
+          }
+          &:active {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    .xlarge {
+      width: 100%;
+      display: grid;
+      grid-template: 95px 66px 54px / 1fr 1fr;
+
+      ul {
+        list-style: none;
+        grid-area: 1/2 / span 1 / span 1;
+        align-self: start;
+        display: flex;
+        justify-self: end;
+        margin: 20px 0;
+
+        li {
+          margin-right: 2rem;
+          a {
+            color: white;
+            text-decoration: none;
+            transition: all 200ms ease-in-out;
+            &:hover {
+              color: $brown;
+            }
+            &:active {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+      .icons {
+        grid-area: 3 / 2 / span 1 / span 1;
+        justify-self: end;
+
+        .icon {
+          margin-right: 2rem;
+
+          cursor: pointer;
+          transition: all 200ms ease-in-out;
+
+          &:hover {
+            color: $brown !important;
+          }
         }
       }
     }

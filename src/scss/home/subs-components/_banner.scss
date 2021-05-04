@@ -6,7 +6,7 @@
   width: 100%;
   height: 31.875rem;
   @include breakpoint-up(large) {
-    height: 40rem;
+    height: 45.625rem;
   }
   @include breakpoint-up(medium) {
     height: 40rem;
@@ -32,12 +32,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
 
     @include breakpoint-up(large) {
       position: absolute;
       align-items: flex-start;
       left: 15%;
+      top: 12rem;
     }
 
     .banner-title {
