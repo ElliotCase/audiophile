@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 function Menu() {
   const isMenuOpen = useSelector((state) => state.dialogs.isMenuOpen);
   return (
-    <div className={`menu  ${isMenuOpen ? "open" : ""} hide-for-desktop`}>
+    <div className={`menu ${isMenuOpen ? "open" : ""} hide-for-desktop`}>
       {/* <div className="container" onClick={(e) => e.stopPropagation()}> */}
       <div className="headphones box">
         <div className="headphone img" />

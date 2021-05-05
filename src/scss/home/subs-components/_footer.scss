@@ -15,9 +15,6 @@ footer {
       align-items: flex-start;
       margin: 0 40px;
     }
-    @include breakpoint-up(xlarge) {
-      margin: 0 165px;
-    }
 
     .block {
       width: 101px;
@@ -25,9 +22,10 @@ footer {
       background-color: $brown;
     }
 
-    @include breakpoint-up(xlarge) {
+    @include breakpoint-up(large) {
       width: 100%;
-      max-width: 1800px;
+      max-width: 1220px;
+      margin: 0 165px;
       .flex-xlarge-desktop {
         display: flex;
         margin: 2rem 0;

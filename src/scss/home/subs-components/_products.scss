@@ -14,11 +14,11 @@
   display: grid;
   margin: 92px 25px;
   @include breakpoint-up("medium") {
-    margin: 147px 23px;
+    margin-top: 147px;
   }
 
   @include breakpoint-up("xlarge") {
-    margin: 200px 133px;
+    // margin: 200px 133px;
   }
 
   grid-template: repeat(3, 165px) / minmax(auto, 327px);
@@ -40,6 +40,7 @@
     border-radius: 5px;
     display: grid;
     grid-template: 100px 30px 35px / 80px;
+    cursor: pointer;
     @include breakpoint-up(medium) {
       grid-template: 90px 35px 33px/90px;
     }
@@ -100,10 +101,6 @@
       color: $brown;
       width: 1rem;
       margin-left: 1rem;
-      cursor: pointer;
-    }
-    p {
-      cursor: pointer;
     }
   }
 }

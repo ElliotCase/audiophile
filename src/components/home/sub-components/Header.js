@@ -19,7 +19,7 @@ function Header() {
   });
 
   return (
-    <header className={`${show ? `fade-out` : ""}`}>
+    <header className={`${show ? `fade-out` : "fade-in"}`}>
       <div className="bar ">
         <ul
           onClick={() => dispatch(openOrCloseMenu(!isMenuOpen))}
