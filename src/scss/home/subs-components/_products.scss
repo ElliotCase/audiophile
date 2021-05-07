@@ -1,4 +1,4 @@
-.products {
+.home-products {
   .img {
     width: 100%;
     z-index: 0;
@@ -53,6 +53,7 @@
     p,
     .arrowForward {
       transform: translateY(-15px);
+      text-align: center;
 
       @include breakpoint-up("medium") {
         transform: translateY(-30px);
@@ -93,14 +94,14 @@
     }
 
     .shop {
+      width: 100%;
       display: flex;
       align-items: center;
+      justify-content: space-evenly;
     }
 
     .arrowForward {
       color: $brown;
-      width: 1rem;
-      margin-left: 1rem;
     }
   }
 }

@@ -2,8 +2,11 @@ import React from "react";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import { useHistory } from "react-router";
 
 function Footer() {
+  const history = useHistory();
+
   return (
     <footer>
       <div className="items">
@@ -14,16 +17,22 @@ function Footer() {
               <p>audiophile</p>
               <ul className="hide-for-large-desktop">
                 <li>
-                  <a href="#home">HOME</a>
+                  <h3 onClick={() => history.push("/")}>HOME</h3>
                 </li>
                 <li>
-                  <a href="#heaphones">HEADPHONES</a>
+                  <h3 onClick={() => history.push("/categories/headphones")}>
+                    HEADPHONES
+                  </h3>
                 </li>
                 <li>
-                  <a href="#speakers">SPEAKERS</a>
+                  <h3 onClick={() => history.push("/categories/speakers")}>
+                    SPEAKERS
+                  </h3>
                 </li>
                 <li>
-                  <a href="#earphones">EARPHONES</a>
+                  <h3 onClick={() => history.push("/categories/earphones")}>
+                    EARPHONES
+                  </h3>
                 </li>
               </ul>
             </div>
@@ -43,20 +52,27 @@ function Footer() {
             </div>
           </div>
           <div className="xlarge hide-for-desktop-down">
-            <ul>
+            <ul className="hide-for-desktop-down">
               <li>
-                <a href="#home">HOME</a>
+                <h3 onClick={() => history.push("/")}>HOME</h3>
               </li>
               <li>
-                <a href="#headphones">HEADPHONES</a>
+                <h3 onClick={() => history.push("/categories/headphones")}>
+                  HEADPHONES
+                </h3>
               </li>
               <li>
-                <a href="#speakers">SPEAKERS</a>
+                <h3 onClick={() => history.push("/categories/speakers")}>
+                  SPEAKERS
+                </h3>
               </li>
               <li>
-                <a href="#earphones">EARPHONES</a>
+                <h3 onClick={() => history.push("/categories/earphones")}>
+                  EARPHONES
+                </h3>
               </li>
             </ul>
+
             <div className="icons">
               <FacebookIcon className="icon" />
               <TwitterIcon className="icon" />

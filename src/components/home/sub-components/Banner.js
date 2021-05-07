@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 function Banner() {
   const history = useHistory();
   return (
-    <section className="banner">
+    <section className="home-banner">
       <div className="banner-titles">
         <div className="banner-title a">
           <p>NEW PRODUCT</p>

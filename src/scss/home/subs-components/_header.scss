@@ -1,4 +1,4 @@
-header {
+.home-header {
   position: fixed;
   left: 0;
   right: 0;
@@ -11,9 +11,28 @@ header {
   z-index: 10;
 
   @include breakpoint-up(large) {
-    left: 10%;
-    right: 10%;
-    max-width: 80%;
+    left: 0;
+    right: 0;
+
+    justify-content: space-evenly;
+  }
+
+  .container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #363636;
+    @include breakpoint-up(large) {
+      width: 70%;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &.fade-out {
@@ -23,7 +42,7 @@ header {
   .bar {
     display: flex;
     align-items: center;
-    margin-left: 1.5rem;
+    margin-left: 24px;
     @include breakpoint-up(large) {
       margin: 0;
     }
@@ -47,6 +66,7 @@ header {
       }
       color: $white;
       p {
+        cursor: pointer;
         font-weight: 800;
       }
     }
@@ -55,16 +75,18 @@ header {
   .links {
     ul {
       display: flex;
+
       justify-content: space-between;
 
       li {
         list-style: none;
 
-        a {
+        h3 {
           color: white;
           text-decoration: none;
           cursor: pointer;
           transition: all 200ms ease-in-out;
+          font-weight: 500;
           &:hover {
             color: $brown;
           }
@@ -75,13 +97,15 @@ header {
         }
 
         &:not(:last-child) {
-          margin-right: 1rem;
+          margin-right: 34px;
         }
       }
     }
   }
 
   .trolleyIcon {
+    display: flex;
+    align-items: center;
     cursor: pointer;
     color: $white;
     margin-right: 24px;
@@ -89,6 +113,4 @@ header {
       margin: 0;
     }
   }
-
-  border-bottom: 1px solid #363636;
 }

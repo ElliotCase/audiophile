@@ -2,7 +2,7 @@ import React from "react";
 
 function Galleries() {
   return (
-    <div className="galleries">
+    <div className="home-galleries">
       <div className="container">
         <div className="a box">
           <div className="contents">

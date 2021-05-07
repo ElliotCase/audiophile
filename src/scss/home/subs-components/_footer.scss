@@ -75,9 +75,10 @@ footer {
 
         li {
           margin: 1.875rem 0;
-          a {
+          h3 {
+            cursor: pointer;
             color: white;
-            text-decoration: none;
+            font-weight: 500;
             transition: all 200ms ease-in-out;
             &:hover {
               color: $brown;
@@ -177,9 +178,11 @@ footer {
 
         li {
           margin-right: 2rem;
-          a {
+
+          h3 {
+            cursor: pointer;
             color: white;
-            text-decoration: none;
+            font-weight: 500;
             transition: all 200ms ease-in-out;
             &:hover {
               color: $brown;
