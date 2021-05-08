@@ -20,6 +20,13 @@
     justify-content: center;
   }
 
+  .middle {
+    p {
+      opacity: 0.5;
+      margin-top: 10px;
+    }
+  }
+
   .right {
     display: grid;
     grid-template: 32px / repeat(3, 32px);
@@ -44,6 +51,9 @@
 
       &:hover {
         color: $brown;
+      }
+      &:disabled {
+        color: rgb(163, 163, 163);
       }
     }
   }

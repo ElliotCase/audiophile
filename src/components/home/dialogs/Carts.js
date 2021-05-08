@@ -4,8 +4,9 @@ import { openOrCloseCart } from "../../../app-redux/features/Dialogs";
 import Cart from "./Cart";
 //import images
 import xx99Mark from "../../../assets/cart/image-xx99-mark-two-headphones.jpg";
-import xx59 from "../../../assets/cart/image-xx59-headphones.jpg";
-import yx1 from "../../../assets/cart/image-yx1-earphones.jpg";
+import { emptyTheCart } from "../../../app-redux/features/Carts";
+// import xx59 from "../../../assets/cart/image-xx59-headphones.jpg";
+// import yx1 from "../../../assets/cart/image-yx1-earphones.jpg";
 
 function Carts() {
   const isCartOpen = useSelector((state) => state.dialogs.isCartOpen);
@@ -13,8 +14,12 @@ function Carts() {
 
   const dispatch = useDispatch();
 
-  console.log(cartsArr);
-
+  const getTotal = () => {
+    let total = 0;
+    const priceArr = cartsArr.map(({ price, quantity }) => price * quantity);
+    total = priceArr.reduce((a, b) => a + b, 0);
+    return total;
+  };
   return (
     <div
       onClick={() => dispatch(openOrCloseCart(false))}
@@ -23,24 +28,32 @@ function Carts() {
       <div className="contents">
         <div className="container" onClick={(event) => event.stopPropagation()}>
           <header>
-            <h4>CART (3)</h4> <p>Remove all</p>
+            <h4>CART ({cartsArr.length})</h4>
+            <button onClick={() => dispatch(emptyTheCart())}>Remove all</button>
           </header>
 
           <div className="carts">
-            <Cart
-              id={1}
-              image={xx99Mark}
-              name={"XX99 MK II"}
-              price={2999}
-              quantity={1}
-            />
-            <Cart id={1} image={xx59} name={"XX59"} price={899} quantity={2} />
-            <Cart id={1} image={yx1} name={"YX1"} price={2999} quantity={1} />
+            {cartsArr.length ? (
+              cartsArr.map(({ id, image, name, price, quantity }) => (
+                <Cart
+                  key={id}
+                  id={id}
+                  image={image}
+                  name={name}
+                  price={price.toLocaleString()}
+                  quantity={quantity}
+                />
+              ))
+            ) : (
+              <div className="title">
+                <p></p>
+              </div>
+            )}
           </div>
 
           <div className="totals">
             <p>TOTAL</p>
-            <h4>$5,396</h4>
+            <h4>${getTotal().toLocaleString()}</h4>
           </div>
 
           <div className="checkout">

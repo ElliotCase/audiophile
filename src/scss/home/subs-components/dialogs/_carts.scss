@@ -23,6 +23,7 @@
       right: 0;
       top: 90px;
       margin: 24px;
+
       animation: transit 300ms forwards;
       @include breakpoint-up(large) {
         right: 190px;
@@ -40,6 +41,10 @@
         padding: 24px;
         background-color: white;
         border-radius: 8px;
+        width: 279px;
+        @include breakpoint-up(medium) {
+          width: 351px;
+        }
 
         header {
           display: flex;
@@ -48,6 +53,10 @@
           justify-content: space-between;
           h4 {
             font-size: 20px;
+          }
+          button {
+            border: none;
+            background-color: transparent;
           }
         }
 
