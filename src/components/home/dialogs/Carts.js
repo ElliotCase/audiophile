@@ -2,16 +2,11 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { openOrCloseCart } from "../../../app-redux/features/Dialogs";
 import Cart from "./Cart";
-//import images
-import xx99Mark from "../../../assets/cart/image-xx99-mark-two-headphones.jpg";
 import { emptyTheCart } from "../../../app-redux/features/Carts";
-// import xx59 from "../../../assets/cart/image-xx59-headphones.jpg";
-// import yx1 from "../../../assets/cart/image-yx1-earphones.jpg";
 
 function Carts() {
   const isCartOpen = useSelector((state) => state.dialogs.isCartOpen);
   const cartsArr = useSelector((state) => state.carts.carts);
-
   const dispatch = useDispatch();
 
   const getTotal = () => {
@@ -46,7 +41,7 @@ function Carts() {
               ))
             ) : (
               <div className="title">
-                <p></p>
+                <p>Your cart is empty</p>
               </div>
             )}
           </div>

@@ -18,7 +18,10 @@ function Menu() {
         <div className="container">
           <div
             className="headphones box"
-            onClick={() => history.push("/categories/headphones")}
+            onClick={() => {
+              history.push("/categories/headphones");
+              dispatch(openOrCloseMenu(false));
+            }}
           >
             <div className="headphone img" />
             <h5>HEADPHONES</h5>
@@ -28,7 +31,10 @@ function Menu() {
           </div>
           <div
             className="speakers box"
-            onClick={() => history.push("/categories/speakers")}
+            onClick={() => {
+              history.push("/categories/speakers");
+              dispatch(openOrCloseMenu(false));
+            }}
           >
             <div className="speaker img" />
             <h5>SPEAKERS</h5>
@@ -38,7 +44,10 @@ function Menu() {
           </div>
           <div
             className="earphones box"
-            onClick={() => history.push("/categories/earphones")}
+            onClick={() => {
+              history.push("/categories/earphones");
+              dispatch(openOrCloseMenu(false));
+            }}
           >
             <div className="earphone img" />
             <h5>EARPHONES</h5>

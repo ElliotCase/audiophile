@@ -22,7 +22,7 @@ function Cart({ id, name, price, image, quantity }) {
     if (index !== -1) dispatch(incrementQuantity({ id: index, quantity: 1 }));
   };
 
-  const decremenQty = () => {
+  const decrementQty = () => {
     const index = cartsArr.findIndex((cart) => cart.id === id);
     if (index !== -1) dispatch(decrementQuantity({ id: index, quantity: 1 }));
   };
@@ -37,7 +37,7 @@ function Cart({ id, name, price, image, quantity }) {
         <p>$ {price}</p>
       </div>
       <div className="right">
-        <button onClick={decremenQty} disabled={quantityValue() <= 1}>
+        <button onClick={decrementQty} disabled={quantityValue() <= 1}>
           -
         </button>
         <div className="screen">

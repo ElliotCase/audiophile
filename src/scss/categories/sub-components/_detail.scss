@@ -1,0 +1,52 @@
+.detail {
+  display: grid;
+  grid-template: minmax(auto, 400px) minmax(auto, 400px) / 1fr;
+  place-items: center;
+  @include breakpoint-up(large) {
+    grid-template: 1fr / 1fr 1fr;
+  }
+  .left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h6 {
+      color: $brown;
+      font-weight: 100;
+      width: 195px;
+      height: 15px;
+      letter-spacing: 10px;
+      margin-top: 37px;
+      margin-bottom: 37px;
+      text-align: center;
+    }
+    h4 {
+      text-align: center;
+      font-size: 35px;
+    }
+    p {
+      text-align: center;
+      margin-top: 37px;
+      line-height: 1.5;
+      opacity: 0.6;
+    }
+    button {
+      margin-top: 37px;
+      width: 160px;
+      height: 48px;
+      border: none;
+      background-color: $brown;
+      color: $white;
+    }
+  }
+}

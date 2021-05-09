@@ -54,6 +54,7 @@
       }
       &:disabled {
         color: rgb(163, 163, 163);
+        cursor: not-allowed;
       }
     }
   }
