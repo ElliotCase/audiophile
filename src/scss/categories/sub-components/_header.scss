@@ -11,6 +11,8 @@
     flex-direction: column;
     height: 100%;
     z-index: 10;
+    justify-content: center;
+    align-items: center;
     .contents {
       display: flex;
       position: fixed;
@@ -39,6 +41,10 @@
       @include breakpoint-up(xlarge) {
         margin-left: 165px;
         margin-right: 165px;
+        width: 100%;
+        max-width: 1220px;
+        left: unset;
+        right: unset;
       }
 
       .left {

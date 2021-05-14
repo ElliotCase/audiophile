@@ -13,8 +13,10 @@
 
   &.details_grids {
     display: grid;
-
     margin: 50px 25px;
+    @include breakpoint-up(large) {
+      margin: 160px 50px;
+    }
     gap: 5rem;
   }
 }

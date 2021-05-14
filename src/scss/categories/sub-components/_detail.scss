@@ -1,17 +1,36 @@
 .detail {
   display: grid;
-  grid-template: minmax(auto, 400px) minmax(auto, 400px) / 1fr;
+  grid-template: minmax(auto, 400px) minmax(auto, 400px) / minmax(auto, 400px);
   place-items: center;
+  justify-content: center;
+
+  @include breakpoint-up(medium) {
+    grid-template: 352px / minmax(auto, 689px);
+  }
   @include breakpoint-up(large) {
-    grid-template: 1fr / 1fr 1fr;
+    grid-template: minmax(auto, 560px) / 1fr 1fr;
+    gap: 125px;
+  }
+  @include breakpoint-up(xlarge) {
+    grid-template: minmax(auto, 560px) / minmax(auto, 555px) minmax(auto, 555px);
+    gap: 125px;
   }
   .left {
     height: 100%;
     display: flex;
     align-items: center;
+    &.column-reverse {
+      @include breakpoint-up(large) {
+        grid-area: 1 / 2 / span 1 / span 1;
+      }
+    }
     img {
       width: 100%;
+      height: 100%;
       border-radius: 8px;
+      @include breakpoint-up(large) {
+        height: unset;
+      }
     }
   }
 
@@ -20,6 +39,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include breakpoint-up(large) {
+      align-items: flex-start;
+    }
     h6 {
       color: $brown;
       font-weight: 100;
@@ -33,12 +55,19 @@
     h4 {
       text-align: center;
       font-size: 35px;
+      max-width: 240px;
+      @include breakpoint-up(large) {
+        text-align: start;
+      }
     }
     p {
       text-align: center;
       margin-top: 37px;
       line-height: 1.5;
       opacity: 0.6;
+      @include breakpoint-up(large) {
+        text-align: start;
+      }
     }
     button {
       margin-top: 37px;
@@ -47,6 +76,11 @@
       border: none;
       background-color: $brown;
       color: $white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $lightsalmon;
+      }
     }
   }
 }

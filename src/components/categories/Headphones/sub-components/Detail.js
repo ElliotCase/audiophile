@@ -1,11 +1,11 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-function Detail({ id, image, title, heading, description, path }) {
+function Detail({ id, image, title, heading, description, path, grid }) {
   const history = useHistory();
   return (
-    <div className="detail">
-      <div className="left">
+    <div id="detail" className={`detail`}>
+      <div className={`left ${grid}`}>
         <img src={image} alt="" />
       </div>
 

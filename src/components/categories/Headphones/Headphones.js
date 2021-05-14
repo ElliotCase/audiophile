@@ -10,7 +10,7 @@ import Details from "./sub-components/Details";
 import { useSelector } from "react-redux";
 
 function Headphones() {
-  const { headphones } = useSelector((state) => state.products.products);
+  const { headphones } = useSelector((state) => state.products.categories);
   return (
     <div className="headphones">
       <Header title={"HEADPHONES"} />

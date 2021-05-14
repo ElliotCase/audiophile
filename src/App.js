@@ -32,7 +32,10 @@ function App() {
         <Route path="/categories/headphones" component={HeadPhones} />
         <Route path="/categories/speakers" component={Speakers} />
         <Route path="/categories/earphones" component={Earphones} />
-        <Route path="/products/headphones/xx9-mark-i" component={xx99_mark_i} />
+        <Route
+          path="/products/headphones/xx99-mark-i"
+          component={xx99_mark_i}
+        />
         <Route
           path="/products/headphones/xx99-mark-ii"
           component={xx99_mark_ii}

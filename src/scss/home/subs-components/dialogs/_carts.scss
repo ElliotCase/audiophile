@@ -41,7 +41,8 @@
         padding: 24px;
         background-color: white;
         border-radius: 8px;
-        width: 279px;
+        width: 100%;
+        min-width: 280px;
         @include breakpoint-up(medium) {
           width: 351px;
         }
@@ -96,6 +97,11 @@
             height: 48px;
             background-color: $brown;
             color: white;
+            cursor: pointer;
+
+            &:hover {
+              background: $lightsalmon;
+            }
           }
         }
       }

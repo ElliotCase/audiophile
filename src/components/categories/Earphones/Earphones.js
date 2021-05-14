@@ -9,7 +9,7 @@ import Footer from "../../home/sub-components/Footer";
 import { useSelector } from "react-redux";
 
 function Earphones() {
-  const { earphones } = useSelector((state) => state.products.products);
+  const { earphones } = useSelector((state) => state.products.categories);
   return (
     <div>
       <Header title={"EARPHONES"} />
