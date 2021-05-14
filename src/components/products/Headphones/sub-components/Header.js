@@ -40,7 +40,7 @@ function Header() {
               <li></li>
               <li></li>
             </ul>
-            <h4>audiophile</h4>
+            <h4 onClick={() => path("/")}>audiophile</h4>
           </div>
           <div className="middle hide-for-tablet">
             <ul>

@@ -55,6 +55,7 @@
         h4 {
           margin-left: 76px;
           font-size: 28.6px;
+          cursor: pointer;
           @include breakpoint-up(large) {
             margin: unset;
           }

@@ -17,6 +17,8 @@ import xx59 from "./components/products/Headphones/XX59";
 import zx9 from "./components/products/Speakers/ZX9";
 import zx7 from "./components/products/Speakers/ZX7";
 import yx1 from "./components/products/Earphones/YX1";
+//Checkout
+import Checkout from "./components/carts/Checkout";
 
 function App() {
   const { pathname } = useLocation();
@@ -44,6 +46,7 @@ function App() {
         <Route path="/products/speakers/zx9" component={zx9} />
         <Route path="/products/speakers/zx7" component={zx7} />
         <Route path="/products/earphones/yx1" component={yx1} />
+        <Route path="/checkout" component={Checkout} />
       </Switch>
     </div>
   );

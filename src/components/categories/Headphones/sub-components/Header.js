@@ -38,7 +38,7 @@ function Header({ title }) {
               <li></li>
               <li></li>
             </ul>
-            <h4>audiophile</h4>
+            <h4 onClick={() => history.push("/")}>audiophile</h4>
           </div>
           <div className="middle hide-for-tablet">
             <ul>

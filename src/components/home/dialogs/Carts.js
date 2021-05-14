@@ -3,17 +3,23 @@ import { useSelector, useDispatch } from "react-redux";
 import { openOrCloseCart } from "../../../app-redux/features/Dialogs";
 import Cart from "./Cart";
 import { emptyTheCart } from "../../../app-redux/features/Carts";
+import { useHistory } from "react-router";
 
 function Carts() {
   const isCartOpen = useSelector((state) => state.dialogs.isCartOpen);
   const cartsArr = useSelector((state) => state.carts.carts);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const getTotal = () => {
     let total = 0;
     const priceArr = cartsArr.map(({ price, quantity }) => price * quantity);
     total = priceArr.reduce((a, b) => a + b, 0);
     return total;
+  };
+  const handleActivity = () => {
+    history.push("/checkout");
+    dispatch(openOrCloseCart(false));
   };
   return (
     <div
@@ -52,7 +58,7 @@ function Carts() {
           </div>
 
           <div className="checkout">
-            <button>CHECKOUT</button>
+            <button onClick={handleActivity}>CHECKOUT</button>
           </div>
         </div>
       </div>
