@@ -1,0 +1,153 @@
+.modal {
+  &.closed {
+    display: none;
+  }
+  &.opened {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background: rgba(17, 17, 17, 0.5);
+    padding-top: 90px;
+    display: grid;
+    place-items: center;
+    overflow-y: auto;
+    @include breakpoint-up(large) {
+      padding-top: 97px;
+    }
+
+    .modal-container {
+      width: 100%;
+      height: 100%;
+      max-width: 327px;
+      max-height: 618px;
+      background: $white;
+      padding: 2rem;
+
+      @include breakpoint-up(medium) {
+        max-width: 540px;
+        max-height: 580px;
+        padding: 3rem;
+      }
+
+      .h4 {
+        font-size: 26px;
+
+        margin-top: 28px;
+        @include breakpoint-up(medium) {
+          margin-top: 40px;
+        }
+      }
+      .p {
+        opacity: 0.6;
+        margin: 28px 0;
+      }
+
+      .grid-modal-cart {
+        display: grid;
+        grid-template: minmax(auto, 140px) minmax(auto, 92px) / 1fr;
+        @include breakpoint-up(medium) {
+          grid-template: 1fr / minmax(auto, 246px) minmax(auto, 198px);
+        }
+
+        .cart-details {
+          background-color: $gray;
+          border-radius: 8px 8px 0 0;
+          @include breakpoint-up(medium) {
+            border-radius: 8px 0 0 8px;
+          }
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          padding: 24px;
+
+          p {
+            text-align: center;
+            margin-top: 6px;
+          }
+          .cart-detail {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #979797;
+            padding-bottom: 7px;
+
+            .first {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 50px;
+                height: 50px;
+              }
+
+              h4 {
+                font-size: 1rem;
+              }
+
+              p {
+                text-align: start;
+              }
+
+              h6 {
+                opacity: 0.6;
+              }
+            }
+            h6 {
+              font-size: 1rem;
+              opacity: 0.6;
+            }
+          }
+        }
+        .grand-total {
+          background-color: $black;
+          border-radius: 0 0 8px 8px;
+          padding: 22px 24px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          @include breakpoint-up(medium) {
+            border-radius: 0 8px 8px 0;
+            justify-content: space-evenly;
+          }
+
+          h4 {
+            color: #606060;
+          }
+
+          h5 {
+            color: white;
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        height: 48px;
+        margin-top: 23px;
+        border: none;
+
+        @include breakpoint-up(medium) {
+          margin-top: 46px;
+        }
+
+        align-self: center;
+        border: none;
+        color: $white;
+        background: $brown;
+        cursor: pointer;
+
+        &:hover {
+          background: $lightsalmon;
+        }
+
+        &:active {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

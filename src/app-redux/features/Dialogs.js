@@ -5,6 +5,7 @@ export const dialogSlice = createSlice({
   initialState: {
     isMenuOpen: false,
     isCartOpen: false,
+    isCheckoutModalOpen: false,
   },
   reducers: {
     openOrCloseMenu: (state, action) => {
@@ -13,9 +14,13 @@ export const dialogSlice = createSlice({
     openOrCloseCart: (state, action) => {
       state.isCartOpen = action.payload;
     },
+    openOrCloseCheckoutModal: (state, action) => {
+      state.isCheckoutModalOpen = action.payload;
+    },
   },
 });
 
-export const { openOrCloseMenu, openOrCloseCart } = dialogSlice.actions;
+export const { openOrCloseMenu, openOrCloseCart, openOrCloseCheckoutModal } =
+  dialogSlice.actions;
 
 export default dialogSlice.reducer;
