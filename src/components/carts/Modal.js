@@ -56,12 +56,16 @@ function Modal() {
               <p>Your Cart is Empty.</p>
             )}
             <div className="second">
-              <p>and {cartsArr.length - 1} other item(s)</p>
+              {cartsArr.length ? (
+                <p>and {cartsArr.length - 1} other item(s)</p>
+              ) : (
+                ""
+              )}
             </div>
           </div>
           <div className="grand-total">
             <h4>GRAND TOTAL</h4>
-            <h5>$ {(getTotal() + 50).toLocaleString()}</h5>
+            <h5>$ {getTotal() ? (getTotal() + 50).toLocaleString() : 0}</h5>
           </div>
         </div>
         <button onClick={goBackHome}>BACK TO HOME</button>

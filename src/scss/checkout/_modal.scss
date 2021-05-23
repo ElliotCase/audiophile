@@ -49,7 +49,10 @@
         display: grid;
         grid-template: minmax(auto, 140px) minmax(auto, 92px) / 1fr;
         @include breakpoint-up(medium) {
-          grid-template: 1fr / minmax(auto, 246px) minmax(auto, 198px);
+          grid-template: minmax(auto, 140px) / minmax(auto, 246px) minmax(
+              auto,
+              198px
+            );
         }
 
         .cart-details {
